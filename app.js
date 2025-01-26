@@ -9,13 +9,26 @@ function adicionarAmigo() {
         alert('Por favor, insira um nome.');
 // Se o valor for válido, armazena os nomes dos ''amigos'' usando o método .push() na ''listaAmigos''.
 // Adicionado função limparCampo();
+// Adicionado função atualizarLista();
     } else {
         listaAmigos.push(amigos);
         console.log(listaAmigos);
         limparCampo();
+        atualizarLista();
     }
 }
 // Função para Limpar o campo de entrada: Após adicionar o nome, redefine o campo de texto para uma string vazia.
 function limparCampo() {
     document.getElementById('amigo').value = ''; 
+}
+// Função para atualizar a lista de amigos e exibir no html.
+function atualizarLista() {
+    let listaAmigosElement = document.getElementById('listaAmigos');
+    listaAmigosElement.innerHTML = "";
+
+    for (let i = 0; i < listaAmigos.length; i++) {
+        let novoAmigo = document.createElement('li');
+        novoAmigo.textContent = listaAmigos[i];
+        listaAmigosElement.appendChild(novoAmigo);
+    }
 }
