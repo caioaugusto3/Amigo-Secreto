@@ -13,7 +13,6 @@ function adicionarAmigo() {
 // Adicionado função atualizarLista();
     } else {
         listaAmigos.push(amigos);
-        console.log(listaAmigos);
         limparCampo();
         atualizarLista();
     }
@@ -45,7 +44,6 @@ function sortearAmigo() {
 // Função para gerar um amigo aleatório.
 function gerarAmigoAleatorio() {
     numeroAmigo = Math.floor(Math.random() * listaAmigos.length);
-    console.log(listaAmigos[numeroAmigo]);
 }
 // Função para atualizar resultado e exibir um amigo aleatorio.
 function atualizarResultado() {
