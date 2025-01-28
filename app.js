@@ -1,4 +1,5 @@
 let listaAmigos = [];
+let numeroAmigo = [];
 
 // Capturar o valor do campo de entrada para obter o texto inserido pelo usuário.
 function adicionarAmigo() {
@@ -32,3 +33,32 @@ function atualizarLista() {
         listaAmigosElement.appendChild(novoAmigo);
     }
 }
+// Função do botão sortear amigo e verifica se tem amigo na lista.
+function sortearAmigo() {
+    if (listaAmigos.length === 0) {
+        alert('Por favor, adicione amigos antes de sortear.');
+    } else {
+        gerarAmigoAleatorio();
+        atualizarResultado();
+    }
+}
+// Função para gerar um amigo aleatório.
+function gerarAmigoAleatorio() {
+    numeroAmigo = Math.floor(Math.random() * listaAmigos.length);
+    console.log(listaAmigos[numeroAmigo]);
+}
+// Função para atualizar resultado e exibir um amigo aleatorio.
+function atualizarResultado() {
+    let atualizarResultadoElement = document.getElementById('resultado');
+    atualizarResultadoElement.innerHTML = "";
+    document.getElementById('listaAmigos').style.display = 'none';  // Oculta lista amigos.
+  
+    if (numeroAmigo >= 0 && numeroAmigo < listaAmigos.length) {
+      let amigoSorteado = listaAmigos[numeroAmigo];
+      let amigoElement = document.createElement('div');
+      amigoElement.textContent = amigoSorteado;
+      atualizarResultadoElement.appendChild(amigoElement);
+    } 
+  }
+
+
