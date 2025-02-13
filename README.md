@@ -4,6 +4,8 @@
   O <strong>Sorteio Amigo Secreto</strong> é uma aplicação interativa que permite organizar e sortear aleatoriamente nomes para o tradicional Amigo Secreto. Com uma interface simples e funcional, você pode adicionar participantes, realizar o sorteio e visualizar o resultado de forma dinâmica.
 </p>
 
+<img src="assets/Animação-amigo-secreto.gif" alt="Amigo Secreto gif">
+
 <h2>Tecnologias Utilizadas</h2>
 <ul>
   <li><strong>HTML</strong>: Estruturação da página.</li>
@@ -27,7 +29,7 @@
 
 <h2>Acesso ao Projeto</h2>
 <p>Você pode acessar e utilizar o projeto online através do link abaixo:</p>
-<p><a href="">Sorteio Amigo Secreto</a></p>
+<p><a href="https://caioaugusto3.github.io/Amigo-Secreto/">Sorteio Amigo Secreto</a></p>
 
 <h2>Créditos e Agradecimentos</h2>
 <ul>
