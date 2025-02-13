@@ -29,7 +29,7 @@
 
 <h2>Acesso ao Projeto</h2>
 <p>Você pode acessar e utilizar o projeto online através do link abaixo:</p>
-<p><a href="https://caioaugusto3.github.io/Amigo-Secreto/">Sorteio Amigo Secreto</a></p>
+<p><a href="https://caioaugusto3.github.io/Amigo-Secreto/" target="_blank">Sorteio Amigo Secreto</a></p>
 
 <h2>Créditos e Agradecimentos</h2>
 <ul>
