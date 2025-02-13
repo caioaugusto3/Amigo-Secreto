@@ -1,10 +1,10 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
+    --color-primary: #ADD8E6; /* Azul claro superior */
+    --color-secondary: #E0FFFF; /* Azul turquesa inferior */
+    --color-tertiary: #B0C4DE; /* Cinza azulado para detalhes */
+    --color-button: #00CED1; /* Turquesa para botões */
+    --color-button-hover: #00B7CD; /* Turquesa mais escuro para hover */
+    --color-text: #2F4F4F; /* Verde musgo escuro para texto */
     --color-white: #FFFFFF;
 }
 
@@ -17,10 +17,11 @@
 
 body {
     height: 100vh;
-    background-color: var(--color-primary);
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary)); /* Gradiente de azul */
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Inter', sans-serif; /* Fonte mais moderna */
 }
 
 .main-content {
@@ -28,133 +29,124 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
+    max-width: auto; /* Largura máxima para telas maiores */
+    margin: 0 auto; /* Centralizar o conteúdo */
 }
 
 /* Banner */
 .header-banner {
-    flex: 40%;
+    flex: 25%; /* Ajustado para melhor proporção */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    padding: 20px 0; /* Espaçamento menor */
 }
 
 /* Seção de entrada */
 .input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
+    flex: 75%; /* Ajustado para melhor proporção */
+    background-color: rgba(255, 255, 255, 0.8); /* Branco com transparência */
+    border-radius: 30px 30px 0 0; /* Bordas mais suaves */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    width: 100%;
+    padding: 30px; /* Espaçamento interno maior */
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
 }
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
+    font-size: 3em; /* Tamanho relativo */
+    font-weight: 700; /* Mais ousado */
+    color: var(--color-text); /* Cor do texto alterada */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
 .section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
-    text-align: center;
+    font-size: 2em; /* Tamanho relativo */
+    font-weight: 600; /* Um pouco menos ousado */
+    color: var(--color-button); /* Cor do botão para o título */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
 /* Contêineres de entrada e botão */
 .input-wrapper {
     display: flex;
-    justify-content: center;
     width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
+    max-width: 500px; /* Largura máxima ajustada */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
 .input-name {
     width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
+    padding: 12px; /* Espaçamento interno */
+    border: 1px solid var(--color-tertiary); /* Borda mais suave */
+    border-radius: 25px; /* Bordas arredondadas */
     font-size: 16px;
-}
-
-.button-container {
-    width: 300px;
-    justify-content: center;
-}
-
-/* Estilos de entrada de texto */
-.input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: var(--color-text); /* Cor do texto */
+    box-sizing: border-box; /* Mantém o tamanho com o padding */
 }
 
 /* Estilos de botão */
 button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
+    padding: 12px 25px; /* Espaçamento interno */
     font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: none; /* Remove a borda padrão */
+    border-radius: 25px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave */
 }
 
 .button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 0 25px 25px 0;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    margin-left: 10px; /* Espaçamento entre os botões */
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: var(--color-button-hover);
 }
 
 /* Listas */
 ul {
     list-style-type: none;
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
     font-size: 18px;
-    margin: 20px 0;
+    margin-top: 20px;
+}
+
+li {
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
 }
 
 .result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
+    color: #008000; /* Verde mais forte */
+    font-size: 1.2em; /* Tamanho relativo */
+    font-weight: 600; /* Um pouco menos ousado */
     text-align: center;
+    margin-top: 20px;
 }
 
 /* Botão de sortear título */
 .button-draw {
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 10px 40px;
+    justify-content: center; /* Centralizar o ícone e o texto */
+    width: auto; /* Largura automática */
+    padding: 12px 25px; /* Espaçamento interno */
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    border-radius: 25px;
+    margin: 20px auto 0; /* Centralizar o botão */
+    transition: background-color 0.3s ease; /* Transição suave */
 }
 
 .button-draw img {
-    margin-right: 40px;
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    width: 20px; /* Tamanho do ícone */
+    height: 20px;
 }
 
 .button-draw:hover {
